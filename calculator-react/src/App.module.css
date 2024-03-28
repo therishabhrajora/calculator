@@ -1,0 +1,24 @@
+
+body{
+  background: url('/src/assets/pngtree-3d-rendering-of-calculator-symbol-against-a-black-background-image_3782739.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  zoom: 1;
+}
+.calculator{
+  width: 20%;
+  min-width: 175px;
+  max-width: 220px;
+  min-height: 300px;
+  margin-left: 40%;
+  background-color:rgba(0, 0, 0, 0.548);
+  position: relative;
+  top:121px;
+  border: 1px solid rgb(168, 167, 167);
+  box-shadow: 2px 2px 5px black;
+  border-radius: 5px;
+  backdrop-filter: blur(2px);
+}
+
+
+
