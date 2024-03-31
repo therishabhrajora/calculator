@@ -7,15 +7,27 @@ import ButtonContainer from './components/buttonContainer.jsx'
 import Calculator from './components/brand.jsx'
 
 function App() {
-  const buttons = ['C', '1', '2', '*', '3', '4', '/', '6', '7', '+', '8', '9', '0', '='];
+
+  let [calval, setcalval] = useState("");
+
+  const onbuttonclick = (buttontext) => {
+    if (buttontext === "C") {
+      setcalval("");
+
+    } else if (buttontext === "=") {
+      const result=eval(calval);
+      setcalval(result);
+    } else {
+      const newdisplayvalue = calval + buttontext;
+      setcalval(newdisplayvalue);
+    }
+  };
   return (
     <>
       <Calculator></Calculator>
       <div className={styles.calculator}>
-
-        <Display></Display>
-        <ButtonContainer values={buttons}></ButtonContainer>
-
+        <Display calval={calval}></Display>
+        <ButtonContainer onbuttonclick={onbuttonclick}></ButtonContainer>
       </div>
     </>
   )
